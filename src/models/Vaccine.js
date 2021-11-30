@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize')
-const database = require('../configs/db')
+const { database } = require('../configs/db')
 
 const Vaccine = database.define('Vaccine', {
 
@@ -8,6 +8,21 @@ const Vaccine = database.define('Vaccine', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
+    },
+    name:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    expected_date:{
+        type: DataTypes.STRING,
+        allowNull:false
+    },
+    vaccinated:{
+        type:DataTypes.BOOLEAN
     }
 
 })
+
+Vaccine.sync()
+
+module.exports= Vaccine
