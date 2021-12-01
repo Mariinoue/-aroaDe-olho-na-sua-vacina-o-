@@ -18,7 +18,8 @@ const Vaccine = database.define('Vaccine', {
         allowNull:false
     },
     vaccinated:{
-        type:DataTypes.BOOLEAN
+        type:DataTypes.BOOLEAN,
+        allowNull:false
     }
 
 })
