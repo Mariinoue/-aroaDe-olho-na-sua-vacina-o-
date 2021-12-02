@@ -67,9 +67,11 @@ const updateVaccine = async(req, res)=> {
             const rowsUpdated = await Vaccine.update( { vaccinated } , { where: { id:idVaccinne } })
             if( rowsUpdated && rowsUpdated>0 ){
                 res.status(200).send({ message: `${rowsUpdated[0]} vacina atualizada.`})
+                
                 } 
             else{
-                res.status(404).send({ message: `Vaicna  com id ${idVaccinne} não encontrado para atualizar informação de favorito` })
+                ErrorResponse(res ,{message: error.array()}, 404, '404 Not Found' )
+                //res.status(404).send({ message: `Vaicna  com id ${idVaccinne} não encontrado para atualizar informação de favorito` })
                 }
             }
     }catch(error){
@@ -78,20 +80,6 @@ const updateVaccine = async(req, res)=> {
 }   
        
             
-        
-      
-   
-           
-            
-            
-        
-            
-        
-
-
-
-              
-
 module.exports = {
     getAllVaccine,
     getVaccine,
