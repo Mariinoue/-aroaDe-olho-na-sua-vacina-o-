@@ -1,9 +1,7 @@
 const Vaccine = require('../models/Vaccine')
-const { body, param, validationResult } = require('express-validator')
+const { validationResult } = require('express-validator')
 const ErrorResponse = require('./error/error-response')
-const NotFoundError = require('./error/error-not-found')
-const BadRequestError = require('./error/bad-request-error')
-const ErrorService = require('./error/error')
+
 
 const getAllVaccine = async(req, res)=> {
      const {vaccineAll} = req.params     
@@ -45,8 +43,8 @@ const createVaccine = async(req, res)=> {
             ErrorResponse(res, {message:error.array()},400, 'Bad Request')
         }else{
             const vaccine = await Vaccine.create({ name, expected_date, vaccinated })
-            console.log(` Cadasto de vacina criado`)
-            res.status(201).send(vaccine)
+            console.log(`${name} seu cadastro de vacina foi criado`)
+            res.status(201).send(`${name} seu cadastro de vacina foi criado`)
         }
         
     }catch(error){
@@ -70,14 +68,15 @@ const updateVaccine = async(req, res)=> {
                 
                 } 
             else{
-                ErrorResponse(res ,{message: error.array()}, 404, '404 Not Found' )
+                ErrorResponse(res ,{message:`Vaicina  com id ${idVaccinne} não encontrado para atualizar status de vacinação` }, 404, '404 Not Found' )
                 //res.status(404).send({ message: `Vaicna  com id ${idVaccinne} não encontrado para atualizar informação de favorito` })
                 }
             }
     }catch(error){
-        ErrorResponse(res,{ message: `Medico com id ${idVaccinne} não encontrado para atualizar informação de favorito` })    
+        //ErrorResponse(res,{ message: `Medico com id ${idVaccinne} não encontrado para atualizar informação de favorito` })    
+        ErrorResponse(res, error)
     }
-}   
+}
        
             
 module.exports = {

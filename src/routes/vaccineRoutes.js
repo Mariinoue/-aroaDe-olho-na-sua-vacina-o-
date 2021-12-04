@@ -18,8 +18,6 @@ router.patch('/:id', [
     param('id')
         .isNumeric()
         .withMessage('The parameter ID must be an interger')
-        .notEmpty()
-        .withMessage('username is required')
 
 ], controller.updateVaccine)
     
