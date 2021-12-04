@@ -51,29 +51,29 @@ Sua API deve ser capaz de cadastrar uma nova vacina, visualizar as vacinas cadas
 
 __________________________________________________________________________________
 
-Arquitertura:
-        de-olho-na-vacina
-      ├── src
-      │   ├── controllers
-      │     ├── vaccineController.js
-      │     ├── error.responde.js
-      │   
-      │   ├── config
-      │     ├── db.js
-      │   
-      │   ├── models
-      |       ├── Vaccine.js
-      │   
-      │   ├── routes
-      │       ├── index.js
-      │       ├── vaccineRoutes.js.js
-      │   
-      |   ├── app.js
-      | 
-      ├── .env
-      ├── .gitignore
-      ├── package.json
-      ├── README
+        Arquitertura:
+                de-olho-na-vacina
+              ├── src
+              │   ├── controllers
+              │     ├── vaccineController.js
+              │     ├── error.responde.js
+              │   
+              │   ├── config
+              │     ├── db.js
+              │   
+              │   ├── models
+              |       ├── Vaccine.js
+              │   
+              │   ├── routes
+              │       ├── index.js
+              │       ├── vaccineRoutes.js.js
+              │   
+              |   ├── app.js
+              | 
+              ├── .env
+              ├── .gitignore
+              ├── package.json
+              ├── README
       
     Desenvolvida por: Mariana Inoue 
 Contato: https://www.linkedin.com/in/mariana-inoue-89279450/
