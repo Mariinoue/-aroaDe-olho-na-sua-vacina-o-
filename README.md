@@ -75,7 +75,8 @@ ________________________________________________________________________________
               ├── package.json
               ├── README
       
-    Desenvolvida por: Mariana Inoue 
+   
+Desenvolvida por: Mariana Inoue 
 Contato: https://www.linkedin.com/in/mariana-inoue-89279450/
   
       
