@@ -40,14 +40,14 @@ Chave	Descrição	Tipo
 - vaccinated	Determina se o paciente foi vacinado	Boolean	true
 Sua API deve ser capaz de cadastrar uma nova vacina, visualizar as vacinas cadastradas e marcar se a vacinação foi realizada.
 
-   {
-    "id": "1",
-    "name": "Maria José",
-    "expected_date": " 10/10/22",
-    "vaccinated": false,
-    "createdAt": "2021-11-30T23:17:17.644Z",
-    "updatedAt": "2021-12-02T18:44:26.804Z"
-}
+       {
+        "id": "1",
+        "name": "Maria José",
+        "expected_date": " 10/10/22",
+        "vaccinated": false,
+        "createdAt": "2021-11-30T23:17:17.644Z",
+        "updatedAt": "2021-12-02T18:44:26.804Z"
+       }
 
 __________________________________________________________________________________
 
