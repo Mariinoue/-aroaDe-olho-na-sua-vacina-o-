@@ -43,10 +43,9 @@ const createVaccine = async(req, res)=> {
             ErrorResponse(res, {message:error.array()},400, 'Bad Request')
         }else{
             const vaccine = await Vaccine.create({ name, expected_date, vaccinated })
-            console.log(`${name} seu cadastro de vacina foi criado`)
+            console.log(vaccine)
             res.status(201).send(`${name} seu cadastro de vacina foi criado`)
         }
-        
     }catch(error){
         ErrorResponse(res, error)
 
@@ -65,15 +64,13 @@ const updateVaccine = async(req, res)=> {
             const rowsUpdated = await Vaccine.update( { vaccinated } , { where: { id:idVaccinne } })
             if( rowsUpdated && rowsUpdated>0 ){
                 res.status(200).send({ message: `${rowsUpdated[0]} vacina atualizada.`})
-                
                 } 
             else{
                 ErrorResponse(res ,{message:`Vaicina  com id ${idVaccinne} não encontrado para atualizar status de vacinação` }, 404, '404 Not Found' )
-                //res.status(404).send({ message: `Vaicna  com id ${idVaccinne} não encontrado para atualizar informação de favorito` })
                 }
             }
     }catch(error){
-        //ErrorResponse(res,{ message: `Medico com id ${idVaccinne} não encontrado para atualizar informação de favorito` })    
+        
         ErrorResponse(res, error)
     }
 }
