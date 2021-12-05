@@ -74,6 +74,34 @@ ________________________________________________________________________________
               ├── .gitignore
               ├── package.json
               ├── README
+              
+____________________________________________________________________
+
+## Endpoint
+
+- Endepoint Index	
+- https://de-olho-na-sua-vacina.herokuapp.com
+![index](https://user-images.githubusercontent.com/82849390/144749257-95ff5e65-8987-4b80-9fae-2d5367ca043e.jpg)
+
+- Endepoint GET	/vaccine	Retornar todas as vacinas cadastradas
+- https://de-olho-na-sua-vacina.herokuapp.com/vaccine/
+![get](https://user-images.githubusercontent.com/82849390/144748738-3ef48ca7-b9bb-4efb-872c-53f74e40e964.jpg)
+ 
+ - Endpoint GET	/vaccine/:id	Retornar apenas uma vacina específica
+ - https://de-olho-na-sua-vacina.herokuapp.com/vaccine/:id
+ ![get-id](https://user-images.githubusercontent.com/82849390/144748788-a9792246-2a92-429e-a2d7-792c84ecfd8c.jpg)
+ 
+- Endpoint POST	/vaccine	Cadastrar uma nova vacina
+- https://de-olho-na-sua-vacina.herokuapp.com/vaccine
+![post](https://user-images.githubusercontent.com/82849390/144748792-8530bfb1-de7f-40d2-92d7-741366e27f35.jpg)
+
+- Tratamento de erro - npm validator
+- Bad request para name con string vazia e expexted-date com input errado
+![validator-post](https://user-images.githubusercontent.com/82849390/144748789-b71d0974-5ac1-4784-9fbf-661e19efd988.jpg)
+
+- Endpoint PATCH	/vaccine/:id/vaccinated	Marcar se tomou a vacina
+- https://de-olho-na-sua-vacina.herokuapp.com/vaccine/:id
+![patch](https://user-images.githubusercontent.com/82849390/144748796-8bd2becd-dd7d-490f-98b1-6e175fdd12d5.jpg)
       
    
 Desenvolvida por: Mariana Inoue 
